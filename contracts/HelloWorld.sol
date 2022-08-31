@@ -1,13 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.8.0;
+pragma solidity ^0.8.1;
 
 /// @title First Smart Contract
 /// @author Julian Boetto
 
 contract HelloWorld {
-    string public message = "Hello World!";
 
-    function showMessage() public view returns (string memory) {
+    function showMessage() public pure returns (string memory) {
+        string memory message = "Hello World!";
+
         return message;
+    }
+
+    function getBlockNumber() public view returns (uint) {
+        return block.timestamp;
     }
 }
