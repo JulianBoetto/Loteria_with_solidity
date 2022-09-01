@@ -1,9 +1,21 @@
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+require("dotenv").config();
+
+const mnemonic = process.env.WALLET_SECRET;
+
 module.exports = {
   networks: {
-    bscTest: {
-      host: "https://data-seed-prebsc-1-s1.binance.org",
-      port: 8545,
-      network_id: "97" // Match any network id
+    bsctest: {
+      provider: () =>
+        new HDWalletProvider({
+          mnemonic: {
+            phrase: mnemonic
+          },
+          providerOrUrl: "https://data-seed-prebsc-1-s1.binance.org:8545",
+          numberOfAddresses: 1
+        }),
+      skipDryRun: true,
+      network_id: "97",
     }
   },
   compilers: {

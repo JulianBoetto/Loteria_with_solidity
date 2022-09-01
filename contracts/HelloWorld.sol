@@ -9,7 +9,7 @@ contract HelloWorld {
 
     string public constant MESSAGE_CONSTANT = "Hello constant!";
 
-    address public constant DONATION_ADDRESS = 0x808ee9973ff652b3Bd2Df33A2eF1AE182335f3f6;
+    address public constant DONATION_ADDRESS = 0x4E00087197F07094314a6B6FfD54D35b2C2f6074;
 
     address public immutable OWNER;
 
