@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ConnectWallet from './components/ConnectWallet';
 import Participate from './components/Participate';
+import Players from './components/Players';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         <ConnectWallet />
         <Participate />
+        <Players />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
